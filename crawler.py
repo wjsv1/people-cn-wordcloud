@@ -100,8 +100,10 @@ def generate_wordcloud(word_freq, output_file='wordcloud.png', title='词云图'
         output_file: 输出文件名
         title: 图表标题
     """
-    # 生成词云
+    # 生成词云（使用项目中文字体）
+    font_path = os.path.join(os.path.dirname(__file__), 'simhei.ttf')
     wordcloud = WordCloud(
+        font_path=font_path,
         width=1200,
         height=800,
         background_color='white',
